@@ -3,7 +3,7 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 02/10/2025 07:11:28 AM
+// Create Date: 02/10/2025 10:57:17 PM
 // Design Name: 
 // Module Name: tb_3
 // Project Name: 
@@ -40,19 +40,19 @@ initial
 begin
         a1=0 ; b1=0 ; c1=0 ;
         #10;
-        a1=0 ; b1=0 ; c1=0 ;
+        a1=0 ; b1=0 ; c1=1 ;
         #10;
-        a1=0 ; b1=0 ; c1=0 ;
+        a1=0 ; b1=1 ; c1=0 ;
         #10;
-        a1=0 ; b1=0 ; c1=0 ;
+        a1=0 ; b1=1 ; c1=1 ;
         #10;
-        a1=0 ; b1=0 ; c1=0 ;
+        a1=1 ; b1=0 ; c1=0 ;
         #10;
-        a1=0 ; b1=0 ; c1=0 ;
+        a1=1 ; b1=0 ; c1=1 ;
         #10;
-        a1=0 ; b1=0 ; c1=0 ;
+        a1=1 ; b1=1 ; c1=0 ;
         #10;
-        a1=0 ; b1=0 ; c1=0 ;
+        a1=1 ; b1=1 ; c1=1 ;
         #10;
         $stop;
 end
@@ -60,5 +60,5 @@ end
 initial
 begin
         $monitor("sum=%b, carry=%b, a=%b, b=%b, c=%b" , sum1,carry1,a1,b1,c1);
-end                
+end
 endmodule
