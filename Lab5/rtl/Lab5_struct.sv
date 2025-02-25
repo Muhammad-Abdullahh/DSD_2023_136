@@ -23,7 +23,7 @@
 module Lab5_struct(
     input logic a,b,c,d, 
     input [2:0] sel,   
-    output A,B,C,D,E,F,G, 
+    output A,B,C,D,E,F,G,H, 
     output [7:0] an  
     );
     
@@ -31,11 +31,11 @@ module Lab5_struct(
     assign A = ((~a)&(b)&(~c)&(~d)) | ((~a)&(~b)&(~c)&(d)) | ((a)&(b)&(~c)&(d)) | ((a)&(~b)&(c)&(d));
     assign B = ((~a)&(b)&(~c)&(d)) | ((b)&(c)&(~d)) | ((a)&(c)&(d)) | ((a)&(b)&(~d));
     assign C = ((~a)&(~b)&(c)&(~d)) | ((a)&(b)&(c)) | ((a)&(b)&(~d));
-    assign D = ((~a)&(b)&(~c)&(~d)) | ((~a)&(~b)&(~c)&(d)) | ((a)&(~b)&(c)&(d)) | ((b)&(c)&(d));
+    assign D = ((~a)&(b)&(~c)&(~d)) | ((~a)&(~b)&(~c)&(d)) | ((a)&(~b)&(c)&(~d)) | ((b)&(c)&(d));
     assign E = ((~a)&(d)) | ((~a)&(b)&(~c)) | ((~b)&(~c)&(d));
     assign F = ((a)&(b)&(~c)&(d)) | ((~a)&(c)&(d)) | ((~a)&(~b)&(d)) | ((~a)&(~b)&(c));
     assign G = ((a)&(b)&(~c)&(~d)) | ((~a)&(b)&(c)&(d)) | ((~a)&(~b)&(~c));
-    
+    assign H = 0;
     // anode
     assign an[0] = ~(~sel[2] & ~sel[1] & ~sel[0]);
     assign an[1] = ~(~sel[2] & ~sel[1] & sel[0]);
